@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Analyzer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg bg-dark text-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">TA</a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Link</a>
+          </li>
+
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h1 class="text-white">Text Analyzer</h1>
+    <form action="/analyze" method="post">
+      <div class="mb-3">
+        <textarea name="text" class="form-control bg-dark text-white" id="" cols="30" rows="10"></textarea>
+      </div>
+      <div class="mb-3">
+        <select name="action" class="form-control bg-dark text-white" id="">
+          <option value="cntchr">Count number of characters</option>
+          <option value="cntws">Count white Spaces</option>
+          <option value="upr">Convert to upper case</option>
+          <option value="lwr">Convert to lower case</option>
+          <option value="splt">Spliting with white space</option>
+          <option value="rstrp">Removing white space from right side</option>
+          <option value="lstrp">Removing white space from left side</option>
+          <option value="strp">Removing white space from both side</option>
+          <option value="cap">Starting with first letter capital</option>
+          <option value="isalp">To check only alphabet</option>
+          <option value="isaln">To check both alphabet and number</option>
+          <option value="islwr">To check sentence is in lower case</option>
+          <option value="isupr">To check sentence is in upper case</option>
+          <option value="isspc">To check sentence is blank</option>
+          <option value="swap">Convert lower to upper and upper to lower</option>
+        </select>
+      </div>
+      <div class="text-end">
+        <button type="submit" class="btn btn-danger">Analyzer</button>
+      </div>
+    </form>
+    <div class="text-white">
+      <center>
+        <h1>Output</h1>
+        <b>{{output}}</b> 
+      </center>
+    </div>
+  </div>
+  <div class="alert alert-info position-absolute bottom-0 m-0 w-100 rounded-0 text-center" role="alert">
+    Developed by Nitesh Kumar Prasad
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
