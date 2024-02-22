@@ -58,6 +58,9 @@ def analyze():
     elif action == "swap":
         # Converting lower to upper and upper to lower
         answer = f"After converting lower to upper and upper to lower:- {text.swapcase()}"
+    elif action == "title":
+        # Converting the string to title
+        answer = f"Title: {text.title()}"
     return render_template('index.html',output = answer)
 
 
